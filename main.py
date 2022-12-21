@@ -1,9 +1,18 @@
-def factorial(n):
-  print(f'factorial({n})')
-  if n == 0:
-    return 1
-  else:
-    return n * factorial(n - 1)
+from replit import db
+import os
 
 
-print(factorial(3))
+# store my name in the replit db
+#db['name'] = 'pepeSilvia'
+
+print(db['name'])
+
+keys = db.keys()
+
+print(keys)
+
+for key in db:
+  print(db[key])
+
+myApiKey = os.environ['apiKey']
+print(myApiKey)
